@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.reformer.authentication">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!--（蓝牙为手表统计必填）-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--（3.7.1 新增）-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-feature android:name="android.hardware.usb.host" />
+    <application
+        android:name=".BaseApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_duizhun"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon_duizhun"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".LoginActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.MONKEY" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <intent-filter>
+            　　　　
+            <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+        </intent-filter>
+        <meta-data
+            android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+            android:resource="@xml/device_filter" />
+        <!--&lt;!&ndash;您从百度网站获取的 APP  KEY&ndash;&gt;-->
+        <!--<meta-data-->
+        <!--android:name="BaiduMobAd_STAT_ID"-->
+        <!--android:value="3bd7b5cf18" />-->
+        <!--&lt;!&ndash;渠道商编号,根据实际情况自行填写&ndash;&gt;-->
+        <!--<meta-data-->
+        <!--android:name="BaiduMobAd_CHANNEL"-->
+        <!--android:value="非渠道" />-->
+        <!--&lt;!&ndash;是否开启错误日志统计，默认为 false&ndash;&gt;-->
+        <!--<meta-data-->
+        <!--android:name="BaiduMobAd_EXCEPTION_LOG"-->
+        <!--android:value="true" />-->
+        <!--&lt;!&ndash;日志发送策略， 可选值： APP_START、 ONCE_A_DAY、 SET_TIME_INTERVAL，-->
+        <!--默认为 APP_START&ndash;&gt;-->
+        <!--<meta-data-->
+        <!--android:name="BaiduMobAd_SEND_STRATEGY"-->
+        <!--android:value="APP_START" />-->
+        <!--&lt;!&ndash;日志发送策略  为 SET_TIME_INTERVAL 时，需设定时间间隔.取值为 -‐24 的整数，默认为 1,单位为小时&ndash;&gt;-->
+        <!--<meta-data-->
+        <!--android:name="BaiduMobAd_TIME_INTERVAL"-->
+        <!--android:value="1" />-->
+        <!--&lt;!&ndash;日志仅在 wifi 网络下发送，默认为 false&ndash;&gt;-->
+        <!--<meta-data-->
+        <!--android:name="BaiduMobAd_ONLY_WIFI"-->
+        <!--android:value="false" />-->
+        <!--&lt;!&ndash;是否获取基站位置信息  ,默认为 true&ndash;&gt;-->
+        <!--<meta-data-->
+        <!--android:name="BaiduMobAd_CELL_LOCATION"-->
+        <!--android:value="true" />-->
+        <!--&lt;!&ndash;是否获取 GPS 位置信息，默认为 true&ndash;&gt;-->
+        <!--<meta-data-->
+        <!--android:name="BaiduMobAd_GPS_LOCATION"-->
+        <!--android:value="true" />-->
+        <!--&lt;!&ndash;是否获取 WIFI 位置信息，默认为 true&ndash;&gt;-->
+        <!--<meta-data-->
+        <!--android:name="BaiduMobAd_WIFI_LOCATION"-->
+        <!--android:value="true" />-->
+    </application>
+
+</manifest>
